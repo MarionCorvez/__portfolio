@@ -1,0 +1,48 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside_links {
+  position: absolute;
+  top: 30%;
+  right: 1.5rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 20rem) {
+  .aside_links {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .aside_links > * {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: white;
+  }
+
+  .aside_links::before {
+    position: absolute;
+    content: "";
+    top: -3rem;
+    width: 4rem;
+    height: 1.5px;
+    transform: rotate(90deg);
+    background: white;
+  }
+
+  .aside_links::after {
+    position: absolute;
+    content: "";
+    bottom: -3rem;
+    width: 4rem;
+    height: 2px;
+    transform: rotate(90deg);
+    background: white;
+  }
+}
