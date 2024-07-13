@@ -1,3 +1,56 @@
+/*
+  ========================================
+  $Theme
+  ========================================
+*/
+
+/* body.dark-mode {
+  background-color: blueviolet;
+}
+ */
+:root {
+  color-scheme: light dark;
+  --c-background: #ffffff;
+  --c-background-variant: #f9f9f9;
+  --c-default: #213547;
+  --c-highlight: #052642;
+  --c-accent-1: #747bff;
+  --c-accent-2: rgb(81, 31, 81);
+}
+
+.theme--dark {
+  --c-background: #213547;
+  --c-background-variant: #f9f9f9;
+  --c-default: #ffffff;
+  --c-accent-1: #747bff;
+  --c-accent-2: rgb(81, 31, 81);
+}
+
+body {
+  color: var(--c-default);
+  background-color: var(--c-background);
+}
+
+a:hover {
+  color: var(--c-accent-1);
+}
+
+.moon {
+  cursor: pointer;
+  background-color: var(--c-default);
+  -webkit-mask-image: url("../../public/icons/moon.svg");
+  mask-image: url("../../public/icons/moon.svg");
+  width: 35px;
+  height: 35px;
+}
+
+.theme--dark .moon {
+  -webkit-mask-image: url("../../public/icons/moonFilled.svg");
+  mask-image: url("../../public/icons/moonFilled.svg");
+}
+
+/*
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -5,9 +58,9 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 14, 16, 15;
+  --background-start-rgb: 255, 252, 225;
+  --background-end-rgb: 255, 252, 225;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -42,9 +95,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 252, 225;
+    --background-start-rgb: 14, 16, 15;
+    --background-end-rgb: 14, 16, 15;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -71,7 +124,21 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
+  html {
+    color-scheme: dark;
+  }
 }
+
+@media (prefers-color-scheme: dark) {
+}
+
+*/
+
+/*
+  ========================================
+  $Reset & Normalize
+  ========================================
+*/
 
 * {
   box-sizing: border-box;
@@ -85,7 +152,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -93,15 +160,37 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  -webkit-font-smoothing: antialiased;
 }
-
+ */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+li {
+  list-style: none;
+}
+
+img,
+img::before,
+img::after {
+  position: relative;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  max-width: 100%;
+  object-fit: cover;
+  text-align: center;
+  font: inherit;
+  font-style: italic;
+}
+
+img::before {
+  content: "We're sorry, the image below is broken :(";
+}
+
+img::after {
+  content: "(url: " attr(src) ")";
 }

@@ -31,7 +31,7 @@ Pour ce projet, il s'agit de créer un site portfolio qui pourra être présent�
 
 0. [x] Étape 0 : Mettre en place l'environnement de développement
 1. [x] Étape 1 : Concevoir l'architecture de l'application
-2. [ ] Étape 2 : Intégrer les maquettes en version statique
+2. [x] Étape 2 : Intégrer les maquettes en version statique
 3. [ ] Étape 3 : Créer et intégrer la charte graphique de l'application
 4. [ ] Étape 4 : Dynamiser les données de l'application
 5. [ ] Étape 5 : Développer les fonctionnalités avancées

@@ -1,3 +1,4 @@
+import Contact from "@/app/ui/Contact";
 import styles from "./index.module.css";
 
 export default function Introduction() {
@@ -13,11 +14,7 @@ export default function Introduction() {
         I also worked for years as a <strong>trainer</strong> and as a{" "}
         <strong>product manager</strong>.
       </p>
-      <ul>
-        <li>email</li>
-        <li>github</li>
-        <li>linkedin</li>
-      </ul>
+      <Contact />
     </section>
   );
 }
