@@ -10,6 +10,7 @@ export default function Contact() {
           href="mailto:marion.corvez@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.icon_link}
         >
           <Image
             src="/mail.svg"

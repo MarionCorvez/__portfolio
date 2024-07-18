@@ -4,42 +4,47 @@ import { works } from "@/app/lib/placeholder-data";
 
 export default function Work() {
   return (
-    <section className={styles.work}>
-      <h2>Latest projects</h2>
-      {works.map((work) => (
-        <article key={work.id} className={styles.work__wrapper}>
-          <div className={styles.work__content}>
-            <h3 className={styles.work__title}>{work.title}</h3>
-            <p className={styles.work__description}>{work.description}</p>
-            <ul className={styles.work__tags}>
-              {work.tags.map((tag) => (
-                <li key={tag.toString()} className={styles.work__tag}>
-                  {tag}
-                </li>
-              ))}
-            </ul>
-            <div>
-              <a href={work.code} target="_blank">
-                View code
-              </a>
-              {work.demo && (
-                <a href={work.demo} target="_blank">
-                  View demo
-                </a>
-              )}
-            </div>
-          </div>
-          <div className={styles.work__picture}>
-            <Image
-              src={work.image}
-              width={600}
-              height={432}
-              className="{styles.work__image}"
-              alt={`${work.title}'s project illustration`}
-            />
-          </div>
-        </article>
-      ))}
+    // <section className={[styles.work, "screen"].join(" ")}>
+    <section className={styles.section}>
+      <div className="screen">
+        <h2>Latest projects</h2>
+        <div className={styles.panel}>
+          {works.map((work) => (
+            <article key={work.id} className={styles.card}>
+              <div className={styles.picture}>
+                <Image
+                  src={work.image}
+                  width={400}
+                  height={250}
+                  className="{styles.image}"
+                  alt={`${work.title}'s project illustration`}
+                />
+              </div>
+              <div className={styles.content}>
+                <h3 className={styles.work__title}>{work.title}</h3>
+                <p className={styles.work__description}>{work.description}</p>
+                <ul className={styles.tags}>
+                  {work.tags.map((tag) => (
+                    <li key={tag.toString()} className={styles.tag}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+                <div className={styles.buttons}>
+                  <a href={work.code} target="_blank">
+                    View code
+                  </a>
+                  {work.demo && (
+                    <a href={work.demo} target="_blank">
+                      View demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

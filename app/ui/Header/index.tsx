@@ -5,10 +5,16 @@ import DarkMode from "@/app/ui/DarkMode";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <h1>marion corvez</h1>
-      <p>Available in September, 2024</p>
-      <DarkMode />
+    <header>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <h1>marion corvez</h1>
+          <p className={styles.availability}>
+            Available in <span className="accent">September, 2024</span>
+          </p>
+        </div>
+        <DarkMode />
+      </div>
     </header>
   );
 }

@@ -11,15 +11,6 @@ const users = [
 
 const works = [
   {
-    id: "d38a3b8e67c6",
-    title: "Argent Bank",
-    description:
-      "Development of the front-end of a Banking Application using React, Redux and RTK Query",
-    image: "/works/argent-bank-2.webp",
-    tags: ["sass", "javascript", "react", "redux"],
-    code: "https://github.com/MarionCorvez/argent-bank",
-  },
-  {
     id: "e3ab19975640",
     title: "724 Events",
     description:
@@ -28,6 +19,15 @@ const works = [
     tags: ["sass", "javascript", "react", "jest"],
     code: "https://github.com/MarionCorvez/724-events",
     demo: "https://724-events-theta.vercel.app/",
+  },
+  {
+    id: "d38a3b8e67c6",
+    title: "Argent Bank",
+    description:
+      "Development of the front-end of a Banking Application using React, Redux and RTK Query",
+    image: "/works/argent-bank-2.webp",
+    tags: ["sass", "javascript", "react", "redux"],
+    code: "https://github.com/MarionCorvez/argent-bank",
   },
   {
     id: "e14d1943f464",
@@ -48,23 +48,29 @@ const works = [
   },
 ];
 
-const revenue = [
-  { month: "Jan", revenue: 2000 },
-  { month: "Feb", revenue: 1800 },
-  { month: "Mar", revenue: 2200 },
-  { month: "Apr", revenue: 2500 },
-  { month: "May", revenue: 2300 },
-  { month: "Jun", revenue: 3200 },
-  { month: "Jul", revenue: 3500 },
-  { month: "Aug", revenue: 3700 },
-  { month: "Sep", revenue: 2500 },
-  { month: "Oct", revenue: 2800 },
-  { month: "Nov", revenue: 3000 },
-  { month: "Dec", revenue: 4800 },
+const skills = [
+  "HTML",
+  "CSS Modules",
+  "Sass",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Redux Toolkit",
+  "Vite",
+  "Next.js",
+  "WordPress",
+  "Squarespace",
+  "Figma",
+  "Adobe XD",
+  "Axure",
+  "Asana",
+  "Slack",
+  "Git",
+  "GitHub",
 ];
 
 module.exports = {
   users,
   works,
-  revenue,
+  skills,
 };

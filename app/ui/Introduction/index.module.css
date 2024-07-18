@@ -1,0 +1,28 @@
+.section {
+}
+
+.content {
+  max-width: 55ch;
+  margin: var(--padding-s) 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.icon_list {
+  display: flex;
+}
+
+.icon_list li {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.25rem;
+}
+
+.icon_list li:not(:first-child) {
+  margin-left: var(--padding-xs);
+}
+
+.icon_list li:hover {
+  border-bottom: 1px solid currentColor;
+}

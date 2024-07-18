@@ -1,5 +1,5 @@
-import { Quicksand } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-export const font = Quicksand({ subsets: ["latin"] });
+export const font = Roboto({ weight: "400", subsets: ["latin"] });
 
-// Work_Sans, Quicksand, Mulish, Jost
+// Mulish, Jost, Kumbh_Sans, Red_Hat_Text, DM_Sans, Libre_Franklin, Roboto
