@@ -16,8 +16,10 @@
   --secondary-tag: #fff;
   --accent: #56bf8e;
   --padding-l: 4rem; /* sections */
+  --padding-m: 3rem; /* mobile top - bottom */
   --padding-s: 2rem; /* header - footer */
   --padding-xs: 1rem; /* between text */
+  --padding-xxs: 0.5rem; /* between text */
 }
 
 /*
@@ -164,10 +166,6 @@ Experience_section__H1HH7
   margin: 0;
 }
 
-html {
-  font-size: 16px;
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -227,7 +225,7 @@ img::after {
 }
 
 body {
-  font-size: 18px; /* 1.125 rem à tester */
+  font-size: 16px; /* 1.125 rem à tester */
   line-height: 1.4;
 }
 
@@ -264,11 +262,11 @@ p {
 
 /* section = background */
 
-/* div: wrapper / container */
+/* div: container */
 .screen {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: var(--padding-l) var(--padding-s);
+  padding: var(--padding-m) var(--padding-s);
 }
 
 .flex_center {
@@ -284,13 +282,16 @@ p {
   grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width > 768px) {
+  .screen {
+    padding: var(--padding-l) var(--padding-s);
+  }
   .grid {
     grid-template-columns: repeat(2, minmax(45%, auto));
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (width > 1024px) {
   .grid {
     grid-template-columns: repeat(3, minmax(30%, auto));
   }

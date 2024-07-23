@@ -6,7 +6,7 @@ import DarkMode from "@/app/ui/DarkMode";
 export default function Header() {
   return (
     <header>
-      <div className={styles.container}>
+      <div className={`${styles.container} screen`}>
         <div className={styles.heading}>
           <h1>marion corvez</h1>
           <p className={styles.availability}>

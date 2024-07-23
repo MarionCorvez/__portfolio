@@ -3,68 +3,146 @@
 
 .panel {
   display: flex;
+  gap: 3rem 1rem; /* big OK */
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: var(--padding-s) 0;
+  margin: var(--padding-s) 0 var(--padding-xs);
 }
 
 .card {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid transparent;
-  margin: var(--padding-s) 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (width >= 768px) {
   .card {
-    max-width: 50%;
-    margin: 0;
+    border: 1px solid var(--foreground);
   }
 }
 
-.card:hover {
-  cursor: pointer;
-  border: 1px solid var(--foreground);
+@media (768px <= width <= 1024px) {
+  .card {
+    flex-wrap: nowrap;
+  }
+  .content {
+    margin: var(--padding-xs) var(--padding-s);
+  }
+  .picture {
+    min-width: 284px;
+  }
+  .image {
+    min-height: 342px;
+  }
+}
+
+@media screen and (width >= 1025px) {
+  .card {
+    padding: 1rem;
+    border: 1px solid transparent;
+    margin: var(--padding-s) 0;
+
+    max-width: 49%;
+    margin: 0;
+  }
+  .card:hover,
+  .card:active {
+    border: 1px solid var(--foreground);
+  }
+  .picture {
+    max-height: 250px;
+  }
 }
 
 .content > * {
   padding-top: var(--padding-xs);
 }
 
-/* .work__picture {
-  border: 1px solid var(--foreground);
-}
- */
-.work__title {
-}
+/* .title {
+  margin-top: var(--padding-xxs);
+} */
 
 .work__description {
 }
 
 .picture {
   width: 100%;
+  overflow: hidden;
 }
 
 .image {
-  width: 100%;
+  transition: transform 0.35s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image:hover {
+    transform: scale(1.25);
+  }
 }
 
 .tags {
   display: flex;
-  gap: 0.75rem;
 }
 
 .tag {
-  font-size: var(--f-sm);
-  padding: 0.6rem 0.75rem;
-  border-radius: 12px;
-  background: rgba(180, 185, 188, 0.1);
-  border: 1px solid var(--foreground);
+  padding-right: 0.75rem;
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
-.buttons {
+.tag:not(:first-child) {
+  padding-left: 0.75rem;
+  border-left: 1px solid currentColor;
+}
+
+/* Test buttons */
+
+.ctas {
   display: flex;
-  gap: var(--padding-xs);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: var(--padding-xxs);
+}
+
+.cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #212121;
+
+  /*border: 1px solid var(--foreground);*/
+  text-transform: uppercase;
+}
+
+.cta_code {
+  background: #212121;
+  color: #fff;
+}
+
+.cta_code:hover,
+.cta_code:active,
+.cta_code:focus {
+  background: var(--accent);
+}
+
+.cta_demo {
+  color: #212121;
+}
+
+.cta_demo:hover,
+.cta_demo:active,
+.cta_demo:focus {
+  color: var(--accent);
+}
+
+.cta_code:hover,
+.cta_code:active,
+.cta_code:focus,
+.cta_demo:hover,
+.cta_demo:active,
+.cta_demo:focus {
+  border: 1px solid var(--accent);
 }
