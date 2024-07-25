@@ -9,9 +9,10 @@ export default function NotFound() {
       <main>
         <section>
           <div className="screen">
-            <h2>Not Found</h2>
-            <p>Could not find requested resource</p>
-            <Link href="/">Return Home</Link>
+            <h2>This page does not exist</h2>
+            <Link className="link" href="/">
+              You may want to return to Home
+            </Link>
           </div>
         </section>
       </main>

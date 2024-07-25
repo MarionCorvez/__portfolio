@@ -1,21 +1,12 @@
 import styles from "./index.module.css";
+import Contact from "@/app/ui/Contact";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className={[styles.container, "screen"].join(" ")}>
-        <p>© 2024 - Marion Corvez</p>
-        <ul className={styles.icon_list}>
-          <li>
-            <a href="#">email</a>
-          </li>
-          <li>
-            <a href="#">github</a>
-          </li>
-          <li>
-            <a href="#">linkedin</a>
-          </li>
-        </ul>
+    <footer className="theme--anthracite">
+      <div className={`${styles.container} flex--center screen`}>
+        <span>© 2024 - Marion Corvez</span>
+        <Contact />
       </div>
     </footer>
   );

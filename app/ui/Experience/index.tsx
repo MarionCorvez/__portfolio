@@ -3,7 +3,7 @@ import data from "@/app/lib/experience";
 
 export default function Experience() {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} theme--main`}>
       <div className="screen">
         <div className="grid">
           <div>

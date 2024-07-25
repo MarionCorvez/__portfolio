@@ -1,14 +1,36 @@
-.contact {
+.list {
+  display: flex;
 }
 
-.vercelLogo {
-  filter: grayscale(50%);
+.list li:not(:first-child) {
+  margin-left: var(--padding-xs);
 }
 
-.logo {
-  filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+.link {
+  position: relative;
+  padding-bottom: 0.25rem;
 }
 
-.icon_link > * {
-  color: #fff;
+.link:hover {
+  color: var(--accent);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .link:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
 }

@@ -1,8 +1,9 @@
 import styles from "./index.module.css";
+import Contact from "@/app/ui/Contact";
 
 export default function Introduction() {
   return (
-    <section className={styles.section}>
+    <section className="theme--anthracite">
       <div className="screen">
         <h2>About</h2>
         <p className={styles.content}>
@@ -13,17 +14,7 @@ export default function Introduction() {
           for years as a <span className="accent">product manager</span> and as
           a <span className="accent">trainer</span>.
         </p>
-        <ul className={styles.icon_list}>
-          <li>
-            <a href="#">email</a>
-          </li>
-          <li>
-            <a href="#">github</a>
-          </li>
-          <li>
-            <a href="#">linkedin</a>
-          </li>
-        </ul>
+        <Contact />
       </div>
     </section>
   );

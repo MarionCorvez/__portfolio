@@ -4,18 +4,19 @@ import { works } from "@/app/lib/placeholder-data";
 
 export default function Work() {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} theme--main`}>
       <div className="screen">
         <h2>Latest projects</h2>
-        <div className={styles.panel}>
+        <div className={`${styles.panel} flex--between`}>
           {works.map((work) => (
-            <article key={work.id} className={styles.card}>
+            <article key={work.id} className={`${styles.card} flex--between`}>
               <div className={styles.picture}>
                 <Image
                   src={work.image}
-                  width={400}
+                  width={686}
                   height={250}
                   className={styles.image}
+                  priority={true}
                   alt={`${work.title}'s project illustration`}
                 />
               </div>

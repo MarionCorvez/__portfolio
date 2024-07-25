@@ -1,162 +1,18 @@
 /*
   ========================================
-  $Theme
+  $Globals
   ========================================
 */
 
-:root {
-  /* Default theme: light */
-  --background: #fff; /* light: background */
-  --foreground: #212121; /* light: text */
-  --icon: #fff;
-  --tag: #ccc;
-  --secondary-background: 220 3% 85%;
-  --secondary-foreground: 220 3% 85%;
-  --secondary-icon: #fff;
-  --secondary-tag: #fff;
-  --accent: #56bf8e;
-  --padding-l: 4rem; /* sections */
-  --padding-m: 3rem; /* mobile top - bottom */
-  --padding-s: 2rem; /* header - footer */
-  --padding-xs: 1rem; /* between text */
-  --padding-xxs: 0.5rem; /* between text */
-}
-
-/*
-black
-anthracite
-light grey
-white
-green
-*/
-
-body {
-  color: var(--foreground);
-  background-color: var(--background);
-}
-
-header,
-.Introduction_section__XWiBW,
-footer {
-  color: var(--background);
-  background-color: var(--foreground);
-}
-
-.theme--dark {
-  color: var(--background);
-  background-color: var(--foreground);
-  /*   --c-background: #213547;
-  --c-background-variant: #f9f9f9;
-  --c-default: #ffffff;
-  --c-accent-1: #747bff;
-  --c-accent-2: rgb(81, 31, 81); */
-}
-
-.Work_section__xFb2_ {
-}
-
-/*
-header / footer = dark background
-main = light
-section highlight = gris plus clair
-color: #fff;
-background-color: #222529;
-en light = 
-background : blanc
-highlight / tags = 
-text : rgb(24, 27, 31)
-background : rgb(237, 240, 242)
-
-header / footer : gris foncé
-about : gris foncé
-work : gris plus clair / tags couleur surfooter
-skills : gris foncé avec tags en gris plus clair
-experience : gris plus clair
-
-*/
-
-/*
-Material theme
-header / intro / footer : #212121;
-text: #fff
-hover: opacity: .8;
-main
-background: ##424242;
-sous-text : #616161
-
-light theme
-footer gray light
-color: #424242;
-background-color: #fafafa;
-
-main
-color : #424242
-background-color: #fff; ?
-
-background-color #121212
-
-*/
-.Skills_section__m2Yjl {
-  background-color: #fafafa;
-  color: #424242;
-  font-size: var(--f-sm);
-}
-
-.theme--dark .Work_section__xFb2_,
-.theme--dark .Skills_section__m2Yjl,
-.theme--dark .Experience_section__H1HH7 {
-  background-color: #121212;
-  color: #c9c9c9; /*heading*/
-}
-
-/*
-sous-text: #9d9d9D;
-tag: #a3a3a3 ou 
-text: #a8a8a8
-*/
-
-/* light / section blanche
-  background-color: #ffffff;
-  color: #4d4d4d; /*heading
-sous-text: #616161;
-link: #212121
-tag: #a3a3a3 ou 
-text: #a8a8a8
-*/
-
-/*
-section margin bottom 48px
-hr {
-    border-color: rgba(0, 0, 0, .12);
-    margin: 0;
-    border-width: 1px 0 0;
-}
-
-*/
-
-/*
-Experience_section__H1HH7
-
-*/
-
-/* en // gestion des icons */
-.moon {
-  cursor: pointer;
-  background-color: var(--background);
-  -webkit-mask-image: url("../../public/icons/moon.svg");
-  mask-image: url("../../public/icons/moon.svg");
-  width: 35px;
-  height: 35px;
-}
-
-.theme--dark .moon {
-  -webkit-mask-image: url("../../public/icons/moonFilled.svg");
-  mask-image: url("../../public/icons/moonFilled.svg");
-}
+/* 1...............................Base */
+/* 2.........................Typography */
+/* 3..............................Theme */
+/* 4.............................Layout */
+/* 5...........................404 page */
 
 /*
   ========================================
-  $Reset & Normalize
+  $Base
   ========================================
 */
 
@@ -224,9 +80,13 @@ img::after {
   --f-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  font-size: 16px; /* 1.125 rem à tester */
-  line-height: 1.4;
+  font-size: var(--f-base);
+  line-height: 1.5;
 }
 
 h1 {
@@ -245,34 +105,112 @@ p {
   font-size: var(--f-base);
 }
 
-/* Harmoniser */
-.tag {
+/*
+  ========================================
+  $Theme
+  ========================================
+*/
+
+:root {
+  --background: #fff; /* light: background */
+  --foreground: #212121; /* light: text */
+  --background--grey: #fafafa;
+  --foreground--grey: #424242;
+  --background--black: #121212;
+  --foreground--black: #c9c9c9;
+  --accent: #56bf8e;
+}
+
+/* theme--light */
+body,
+.theme--main,
+.theme--dark .Work_cta_code__VmFI3 {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.theme--dark,
+.theme--anthracite {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.theme--grey {
+  background-color: var(--background--grey);
+  color: var(--foreground--grey);
   font-size: var(--f-sm);
 }
 
-.accent {
+.theme--dark .theme--main,
+.theme--dark .theme--grey {
+  background-color: var(--background--black);
+  color: var(--foreground--black);
+}
+
+.theme--dark .Work_cta_code__VmFI3:hover {
+  color: var(--background);
+}
+
+.theme--dark .Work_tag__wuazO {
+  color: var(--foreground--black);
+}
+
+.moon {
+  cursor: pointer;
+  background-color: var(--background);
+  -webkit-mask-image: url("../../public/icons/moon.svg");
+  mask-image: url("../../public/icons/moon.svg");
+  width: 35px;
+  height: 35px;
+}
+
+.moon:hover {
+  background-color: var(--accent);
+}
+
+.theme--dark .moon {
+  -webkit-mask-image: url("../../public/icons/moonFilled.svg");
+  mask-image: url("../../public/icons/moonFilled.svg");
+}
+
+.accent,
+*::selection {
   color: var(--accent);
 }
 
 /*
   ========================================
-  $Layout : put in page.module
+  $Layout
   ========================================
 */
 
-/* section = background */
+:root {
+  --screen: 1200px;
+  --padding-l: 4rem; /* sections */
+  --padding-m: 3rem; /* mobile top - bottom */
+  --padding-s: 2rem; /* header - footer */
+  --padding-xs: 1rem; /* between text */
+  --padding-xxs: 0.5rem; /* between text */
+}
 
-/* div: container */
+/* section = background */
+/* div = container */
 .screen {
-  max-width: 1200px;
+  max-width: var(--screen);
   margin: 0 auto;
   padding: var(--padding-m) var(--padding-s);
 }
 
-.flex_center {
+.flex--center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex--between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .grid {
@@ -295,4 +233,32 @@ p {
   .grid {
     grid-template-columns: repeat(3, minmax(30%, auto));
   }
+}
+
+/*
+  ========================================
+  $404 page
+  ========================================
+*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.link {
+  display: inline-block;
+  margin-top: var(--padding-s);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.link:hover {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
 }

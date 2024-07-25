@@ -1,62 +1,44 @@
-import Image from "next/image";
-
 import styles from "./index.module.css";
 
 export default function Contact() {
   return (
-    <div className={styles.contact}>
-      <div>
+    <ul className={styles.list}>
+      <li>
         <a
           href="mailto:marion.corvez@gmail.com"
-          target="_blank"
           rel="noopener noreferrer"
-          className={styles.icon_link}
+          title="Send me an email, open webmail"
+          aria-label="Send me an email, open webmail"
+          className={styles.link}
         >
-          <Image
-            src="/mail.svg"
-            alt="Email Logo"
-            className={styles.vercelLogo}
-            width={24}
-            height={24}
-            priority
-          />{" "}
           Email
         </a>
-      </div>
-      <div>
+      </li>
+      <li>
         <a
           href="https://github.com/MarionCorvez"
           target="_blank"
           rel="noopener noreferrer"
+          title="Visit my GitHub account, new window"
+          aria-label="Visit my GitHub account, new window"
+          className={styles.link}
         >
-          <Image
-            src="/github.svg"
-            alt="GitHub Logo"
-            className={styles.vercelLogo}
-            width={20}
-            height={24}
-            priority
-          />{" "}
           GitHub
         </a>
-      </div>
-      <div>
+      </li>
+      <li>
         <a
           href="https://www.linkedin.com/in/marioncorvez/"
           target="_blank"
           rel="noopener noreferrer"
+          title="Visit my LinkedIn page, new window"
+          aria-label="Visit my LinkedIn page, new window"
+          className={styles.link}
         >
-          <Image
-            src="/rounded-linkedin.svg"
-            alt="LinkedIn Logo"
-            className={styles.vercelLogo}
-            width={20}
-            height={24}
-            priority
-          />{" "}
+          {" "}
           LinkedIn
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 }

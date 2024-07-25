@@ -8,6 +8,7 @@ export default function DarkMode() {
       onClick={() => setDarkMode((prevDarkMode) => !prevDarkMode)}
       className="moon"
       title="Click to change light mode"
+      aria-label="Click to change light mode"
     ></button>
   );
 }

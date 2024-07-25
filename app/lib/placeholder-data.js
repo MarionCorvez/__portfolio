@@ -1,14 +1,3 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
-// https://nextjs.org/learn/dashboard-app/fetching-data
-const users = [
-  {
-    id: "410544b2-4001-4271-9855-fec4b6a6442a",
-    name: "User",
-    email: "user@nextmail.com",
-    password: "123456",
-  },
-];
-
 const works = [
   {
     id: "e3ab19975640",
@@ -43,7 +32,7 @@ const works = [
     id: "5b619fe57baa",
     title: "Sophie Bluel",
     description:
-      "The project consists of creating the portfolio of Sophie Bluel, an interior designer, and presenting her projects filtered by categories. With an admin access, the architect must be able to manage her work: add, modify or delete it.",
+      "The project is built with Node.js and consists of creating the portfolio of Sophie Bluel, an interior designer, and presenting her projects filtered by categories. With an admin access, the architect must be able to manage her work: add, modify or delete it.",
     image: "/works/sophie-bluel.webp",
     tags: ["sass", "javascript"],
     code: "https://github.com/MarionCorvez/sophie-bluel",
@@ -51,30 +40,29 @@ const works = [
 ];
 
 const skills = [
-  "HTML",
-  "CSS Modules",
+  //  "HTML",
+  /*   "CSS Modules",
   "Sass",
   "JavaScript",
   "TypeScript",
   "React",
   "Redux Toolkit",
-  "Vite",
+  "Vite", */
   "Next.js",
-  "WordPress",
-  "Squarespace",
+  /*   "WordPress",
+  "Squarespace", */
   "Figma",
-  "Adobe XD",
+  /*   "Adobe XD",
   "Axure",
   "Asana",
   "Slack",
-  "Git",
+  "Git", */
   "GitHub",
-  "Swagger",
-  "Postman",
+  /*   "Swagger",
+  "Postman", */
 ];
 
 module.exports = {
-  users,
   works,
   skills,
 };

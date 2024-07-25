@@ -1,36 +1,12 @@
 .container {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: var(--padding-s);
+  gap: var(--padding-xs);
 }
 
-.icon_list {
-  display: flex;
-}
-
-.icon_list li {
-  border-bottom: 1px solid transparent;
-  padding-top: var(--padding-xs);
-  padding-bottom: 0.25rem;
-}
-
-.icon_list li:not(:first-child) {
-  margin-left: var(--padding-xs);
-}
-
-.icon_list li:hover {
-  border-bottom: 1px solid currentColor;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   .container {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-  .icon_list li {
-    padding-top: 0;
   }
 }
