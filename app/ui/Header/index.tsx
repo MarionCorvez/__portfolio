@@ -12,7 +12,7 @@ export default function Header() {
             <span className="accent">marion</span> corvez
           </h1>
           <p className={styles.availability}>
-            Available in <span className="accent">September, 2024</span>
+            Available in <strong>September, 2024</strong>
           </p>
         </div>
         <DarkMode />

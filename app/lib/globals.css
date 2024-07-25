@@ -173,6 +173,11 @@ body,
   mask-image: url("../../public/icons/moonFilled.svg");
 }
 
+strong {
+  font-weight: normal;
+  color: var(--accent);
+}
+
 .accent,
 *::selection {
   color: var(--accent);

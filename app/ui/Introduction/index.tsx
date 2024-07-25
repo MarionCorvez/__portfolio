@@ -7,12 +7,13 @@ export default function Introduction() {
       <div className="screen">
         <h2>About</h2>
         <p className={styles.content}>
-          Hello, I am a junior{" "}
-          <span className="accent">front-end developer</span> specialised in
-          Component Driven User Interfaces with a strong focus on accessibility,
-          search engine optimisation, performance and security. I also worked
-          for years as a <span className="accent">product manager</span> and as
-          a <span className="accent">trainer</span>.
+          Hello, I am a junior <strong>front-end developer</strong> specialised
+          in Component Driven User Interfaces and Agile methodologies with a
+          strong focus on accessibility, search engine optimisation, performance
+          and security. I also worked for years as a{" "}
+          <strong>product manager</strong> and as a <strong>teacher</strong>. I
+          can help you build digital products from UX design to front-end
+          coding, especially with the React library.
         </p>
         <Contact />
       </div>

@@ -17,9 +17,9 @@ export default function Experience() {
           <div>
             <h2>Experience</h2>
             <ul>
-              <li>2014 - now: Founder of Naota</li>
-              <li>2017 - 2021: Trainer</li>
-              <li>2007 - 2013: Product Manager</li>
+              <li>2022 - now: Design & Development of web applications</li>
+              <li>2017 - 2021: New Media & Communication Teacher</li>
+              <li>2007 - 2016: Digital Product Manager</li>
             </ul>
           </div>
           <div>

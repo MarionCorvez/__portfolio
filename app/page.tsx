@@ -1,8 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Introduction from "@/app/ui/Introduction";
 import Work from "@/app/ui/Work";
-import Aside from "@/app/ui/Aside";
 import Header from "@/app/ui/Header";
 import Footer from "@/app/ui/Footer";
 import Skills from "@/app/ui/Skills";
@@ -18,7 +15,6 @@ export default function Home() {
         <Skills />
         <Experience />
       </main>
-      {/*<Aside />*/}
       <Footer />
     </>
   );

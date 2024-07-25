@@ -1,40 +1,44 @@
 import { SVGProps } from "react";
-//import { ArrowDownTray } from "@/ui/components/icons/arrow-down-tray";
-import { Mail } from "@/app/lib/icons/mail";
+import { Adobe } from "./adobe";
+import { Asana } from "./asana";
+import { Css } from "./css";
 import { Figma } from "@/app/lib/icons/figma";
-import { Next } from "@/app/lib/icons/next";
-import { React } from "@/app/lib/icons/react";
-import { Linkedin } from "./linkedin";
+import { Git } from "./git";
 import { Github } from "./github";
+import { Html } from "./html";
+import { Javascript } from "./javascript";
+import { Next } from "@/app/lib/icons/next";
+import { Notion } from "@/app/lib/icons/notion";
+import { React } from "./react";
+import { Redux } from "./redux";
+import { Sass } from "./sass";
+import { Slack } from "./slack";
+import { Squarespace } from "./squarespace";
+import { Swagger } from "./swagger";
+import { Typescript } from "./typescript";
+import { Vite } from "./Vite";
+import { Wordpress } from "./wordpress";
 
 const ICONS = {
-  //"arrow-down-tray": ArrowDownTray,
+  "Adobe XD": Adobe,
+  Asana: Asana,
+  "CSS Modules": Css,
   Figma: Figma,
+  Git: Git,
   GitHub: Github,
+  HTML5: Html,
+  JavaScript: Javascript,
   "Next.js": Next,
+  Notion: Notion,
   React: React,
-  LinkedIn: Linkedin,
-
-  /* "HTML",
-   "CSS Modules",
-  "Sass",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux Toolkit",
-  "Vite", 
-  "Next.js",
-  /*   "WordPress",
-  "Squarespace", 
-  "Figma",
-  /*   "Adobe XD",
-  "Axure",
-  "Asana",
-  "Slack",
-  "Git", 
-  "GitHub",
-  /*   "Swagger",
-  "Postman", */
+  Redux: Redux,
+  Sass: Sass,
+  Slack: Slack,
+  Squarespace: Squarespace,
+  Swagger: Swagger,
+  TypeScript: Typescript,
+  Vite: Vite,
+  WordPress: Wordpress,
 };
 
 type Props = {
@@ -42,7 +46,7 @@ type Props = {
   size?: 16 | 24 | 32 | 48;
 } & SVGProps<SVGSVGElement>;
 
-export const Icon = ({ name, size = 48, ...rest }: Props) => {
+export const Icon = ({ name, size = 32, ...rest }: Props) => {
   const Component = ICONS[name];
   return <Component height={size} width={size} {...rest} />;
 };

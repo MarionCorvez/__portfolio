@@ -40,26 +40,25 @@ const works = [
 ];
 
 const skills = [
-  //  "HTML",
-  /*   "CSS Modules",
+  "HTML5",
+  "CSS Modules",
   "Sass",
   "JavaScript",
   "TypeScript",
   "React",
-  "Redux Toolkit",
-  "Vite", */
+  "Redux",
+  "Vite",
   "Next.js",
-  /*   "WordPress",
-  "Squarespace", */
+  "WordPress",
+  "Squarespace",
   "Figma",
-  /*   "Adobe XD",
-  "Axure",
+  "Adobe XD",
   "Asana",
+  "Notion",
   "Slack",
-  "Git", */
+  "Git",
   "GitHub",
-  /*   "Swagger",
-  "Postman", */
+  "Swagger",
 ];
 
 module.exports = {
